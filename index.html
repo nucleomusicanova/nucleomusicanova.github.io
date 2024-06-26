@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Núcleo Música Nova</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Patches" />
+    <meta property="og:locale" content="pt_BR" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="canonical" href="https://nucleomusicanova.github.io/" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <h1 align="center" style="margin-bottom: 3%; margin-top: 3%">Projetos</h1>
+    <p>
+      Bem-vindo ao repositório de projetos do Núcleo Música Nova. Aqui você
+      encontrará projetos desenvolvidos por membros do Núcleo Música Nova. Principalmente aqueles que envolvem a criação de <i>patches</i>, programas, entre outros.
+    </p>
+    <hr>
+    <h3><i class="fa-solid fa-person-digging fa-fade" style="color: #c3b069;"></i> Ainda em Construção! <i class="fa-solid fa-person-digging fa-fade" style="color: #c3b069;"></i></h3>
+    <hr>
+
+
+    <hr style="margin-top: 5%;">
+
+    <div class="container">
+      <div class="card">
+        <div>
+          <h3 class="card-title">Synthia</h3>
+          <p class="card-text">
+            Synthia é um conjunto de patches pensados para um contexto criativo-educacional.
+          </p>
+        </div>
+        <img
+          src="./assets/images/synthia.png"
+          class="card-img"
+          onclick="window.open('Synthia', '_blank')"
+          style="cursor: pointer"
+        />
+      </div>
+
+      <div class="card">
+        <div>
+          <h3 class="card-title">Harry Partch Diamond</h3>
+          <p class="card-text">
+            Esse projeto é uma breve explicação e exposição do funcionamento da Tonalidade Diamante de Harry Partch.
+          </p>
+        </div>
+        <img
+          src="./assets/images/diamond.png"
+          class="card-img"
+          onclick="window.open('Partch-Diamond', '_blank')"
+          style="cursor: pointer"
+        />
+      </div>
+    </div>
+    <hr />
+
+  </body>
+  <footer style="margin-bottom: 0px">
+    <br />
+    <img
+      src="./assets/images/NucleoMusicaNova_preto.png"
+      style="vertical-align: middle; width: 50px"
+    />
+    <p
+      id="footer-year"
+      style="text-align: center; margin-top: 2; font-size: 0.8em; font-weight: bold"
+    >
+      &copy; 2024 - <span id="current-year"></span> - Núcleo Música Nova.
+    </p>
+  </footer>
+  <script>
+    var currentYearElement = document.getElementById("current-year");
+    var currentYear = new Date().getFullYear();
+    currentYearElement.textContent = currentYear;
+  </script>
+</html>

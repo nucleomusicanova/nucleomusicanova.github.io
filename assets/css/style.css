@@ -1,0 +1,271 @@
+body {
+  background-color: #141414;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+h1 {
+  font-family: Popins, serif;
+  text-align: center;
+  color: white;
+}
+h2 {
+  font-family: Popins, serif;
+  text-align: center;
+  color: white;
+}
+
+h3 {
+  font-family: Popins, serif;
+  text-align: center;
+  color: white;
+  /* set as bold*/
+  font-weight: bold;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  font-family: Popins, serif;
+  line-height: 1.5; /* altere este valor conforme necessário */
+}
+ul {
+  color: white;
+  font-size: 20px;
+  font-family: Popins, serif;
+  line-height: 1.5; /* altere este valor conforme necessário */
+}
+
+hr {
+  height: 0px;
+  width: 50%;
+  color: rgba(230, 230, 230, 0.1);
+  border: 1px solid rgba(230, 230, 230, 0.1);
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  fixed: bottom;
+}
+
+/* Estilo padrão para a classe .container */
+.container {
+  width: 100%;
+  top: 30px;
+  margin-bottom: 25px;
+  left: calc(50% - 100px);
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+.card-link:hover .card {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.card {
+  display: flex;
+  height: 320px;
+  width: 100%;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: 0.2rem 0 0.5rem #242424;
+  position: relative;
+  left: 0px;
+}
+
+@media (max-width: 1200px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card:not(:first-child) {
+    margin-left: -20px;
+  }
+  .card:hover {
+    transform: translateY(-20px);
+    transition: transform 0.6s ease-out;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  }
+
+  .card:hover ~ .card {
+    position: relative;
+    left: 90px;
+    transition: left 0.4s ease-out;
+  }
+  .card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
+}
+
+.card-img {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 60%;
+  margin-right: 5%;
+  max-width: 40%;
+  height: auto;
+  border-radius: 10px;
+  display: block; /* Ensure the element behaves like a block-level element */
+}
+
+.card-title {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.card-text {
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+  position: absolute;
+  left: 20px;
+  top: 55px;
+  bottom: 20px;
+  margin-right: 50%;
+  line-height: 1.1;
+  display: block;
+}
+
+/*
+ *╭─────────────────────────────────────╮
+ *│            Card Execute             │
+ *╰─────────────────────────────────────╯
+*/
+
+.card-execute {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  bottom: 60px;
+  line-height: 1;
+  display: block;
+}
+
+.card-execute a {
+  color: inherit; /* Define a cor do texto como a mesma cor do elemento pai */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.card-execute:hover::after {
+  width: 100%; /* Aumenta o comprimento do sublinhado no hover */
+  height: 2px; /* Altura do sublinhado */
+}
+
+.card-execute::after {
+  content: "";
+  display: block;
+  width: 95%;
+  height: 1px; /* Altura do sublinhado */
+  background-color: white; /* Cor do sublinhado */
+  position: relative;
+  bottom: -3px; /* Posicionamento vertical do sublinhado */
+  transition:
+    width 0.3s ease,
+    height 0.3s ease;
+}
+
+/*
+ *╭─────────────────────────────────────╮
+ *│            Card Details             │
+ *╰─────────────────────────────────────╯
+*/
+
+.card-details {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  bottom: 0px;
+  line-height: 1;
+  display: block;
+}
+
+.card-details a {
+  color: inherit; /* Define a cor do texto como a mesma cor do elemento pai */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.card-details:hover::after {
+  width: 100%; /* Aumenta o comprimento do sublinhado no hover */
+  height: 2px; /* Altura do sublinhado */
+}
+
+.card-details::after {
+  content: "";
+  display: block;
+  width: 95%;
+  height: 1px; /* Altura do sublinhado */
+  background-color: white; /* Cor do sublinhado */
+  position: relative;
+  bottom: -3px; /* Posicionamento vertical do sublinhado */
+  transition:
+    width 0.3s ease,
+    height 0.3s ease;
+}
+
+/*
+ *╭─────────────────────────────────────╮
+ *│            Card Download            │
+ *╰─────────────────────────────────────╯
+*/
+
+.card-download {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  line-height: 1;
+  display: block;
+}
+
+.card-download a {
+  color: inherit; /* Define a cor do texto como a mesma cor do elemento pai */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.card-download:hover::after {
+  width: 100%; /* Aumenta o comprimento do sublinhado no hover */
+  height: 2px; /* Altura do sublinhado */
+}
+
+.card-download::after {
+  content: "";
+  display: block;
+  width: 95%;
+  height: 1px; /* Altura do sublinhado */
+  background-color: white; /* Cor do sublinhado */
+  position: relative;
+  bottom: -3px; /* Posicionamento vertical do sublinhado */
+  transition:
+    width 0.3s ease,
+    height 0.3s ease;
+}
